@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Vistral Temporal Bindings 
 
-# Run and deploy your AI Studio app
+https://github.com/timeplus-io/vistral 
 
-This contains everything you need to run your app locally.
+Interactive visualization of temporal binding strategies for streaming data:
 
-View your app in AI Studio: https://ai.studio/apps/drive/13tf2A5pyQGmfz3TPdoAEJ57PFIs_nyLV
+- **Axis Binding** - Continuous data stream through a fixed time window
+- **Frame Binding** - Discrete time snapshots for state comparison  
+- **Key-based Updates** - In-place mutations of entities by unique key
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Node.js
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   ```bash
+   npm install
+   ```
+
+2. Run the app:
+   ```bash
+   npm run dev
+   ```
+
+3. Open http://localhost:3000 in your browser
+
+## Build Standalone HTML
+
+Create a single, self-contained HTML file with no external dependencies:
+
+1. First time only - download Tailwind CSS:
+   ```bash
+   curl -sL https://cdn.tailwindcss.com > tailwind.css
+   ```
+
+2. Build the standalone HTML:
+   ```bash
+   npm run build:standalone
+   ```
+
+3. The output will be at `docs/index.html`
+
+4. Open `docs/index.html` directly in any browser - no server needed!
+
+## Deploy
+
+The `docs/` folder contains a fully self-contained static HTML file that can be deployed to any static hosting service (GitHub Pages, Netlify, Vercel, etc.).
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run build:standalone` - Build single HTML file to docs/index.html
+- `npm run preview` - Preview production build
