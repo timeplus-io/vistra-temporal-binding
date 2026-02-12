@@ -18,9 +18,8 @@ export const AppendVisualizer: React.FC<Props> = ({ isActive }) => {
   const requestRef = useRef<number | null>(null);
   const lastAddTimeRef = useRef<number>(0);
 
-  // Using colors that work well in both modes (dark enough for light mode, bright enough for dark mode)
-  // Or standard tailwind colors that we can control via style.
-  const colors = ['#0ea5e9', '#06b6d4', '#3b82f6']; 
+  // Timeplus Pink and Purple palette
+  const colors = ['#D53F8C', '#9D55EC', '#D53F8C', '#B794F4']; 
 
   const animate = (time: number) => {
     if (isPaused) return;
