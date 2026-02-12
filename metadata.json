@@ -1,0 +1,5 @@
+{
+  "name": "Vistral Temporal Bindings",
+  "description": "Interactive visualization of Append, Latest, and Time-Traveling temporal binding concepts.",
+  "requestFramePermissions": []
+}
