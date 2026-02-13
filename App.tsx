@@ -53,7 +53,7 @@ const App: React.FC = () => {
         : 'border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/5'
         }`}
     >
-      <Icon size={18} className={activeMode === mode ? 'text-primary' : 'text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300'} />
+      <Icon size={18} className={activeMode === mode ? 'text-[#D53F8C]' : 'text-zinc-400 dark:text-zinc-500 group-hover:text-zinc-600 dark:group-hover:text-zinc-300'} />
       <div className="flex flex-col items-start">
         <span className="leading-none">{label}</span>
         <span className="text-[10px] opacity-70 mt-1 font-mono">{subLabel}</span>
@@ -111,9 +111,9 @@ const App: React.FC = () => {
         </div>
 
         <div className="p-4 border-t border-border mt-auto">
-          <div className="text-[10px] text-zinc-500 dark:text-zinc-600 space-y-2">
+          <div className="text-[14px] text-zinc-500 dark:text-zinc-600 space-y-2">
             <p>
-              <a href="https://github.com/timeplus-io/vistral" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Vistral</a> is a streaming data visualization library open sourced by <a href="https://timeplus.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">timeplus</a>, based on the Grammar of Graphics.
+              <a href="https://github.com/timeplus-io/vistral" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors">Vistral</a> is a streaming data visualization library open sourced by <a href="https://timeplus.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary transition-colors"> Timeplus </a>, based on the Grammar of Graphics.
             </p>
             <p>
               Check out our open source SQL pipeline engine: <a href="https://github.com/timeplus-io/proton/" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-900 dark:hover:text-zinc-400">Timeplus Proton</a>
