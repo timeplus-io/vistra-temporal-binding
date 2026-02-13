@@ -1,4 +1,5 @@
 export enum BindingMode {
+  HOME = 'Home',
   AXIS = 'Axis Binding',
   FRAME = 'Frame Binding',
   KEY = 'Key-based Updates'

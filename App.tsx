@@ -3,11 +3,12 @@ import { BindingMode } from './types';
 import { AppendVisualizer } from './components/AppendVisualizer';
 import { LatestVisualizer } from './components/LatestVisualizer';
 import { TimeTravelVisualizer } from './components/TimeTravelVisualizer';
-import { ArrowRightLeft, Film, Database, Moon, Sun } from 'lucide-react';
+import { Home } from './components/Home';
+import { ArrowRightLeft, Film, Database, Moon, Sun, LayoutGrid } from 'lucide-react';
 import logo from './assets/timeplus-vistral_logo_pink.svg';
 
 const App: React.FC = () => {
-  const [activeMode, setActiveMode] = useState<BindingMode>(BindingMode.AXIS);
+  const [activeMode, setActiveMode] = useState<BindingMode>(BindingMode.HOME);
   const [isDark, setIsDark] = useState(true);
 
   useEffect(() => {
@@ -31,6 +32,8 @@ const App: React.FC = () => {
 
   const renderVisualizer = () => {
     switch (activeMode) {
+      case BindingMode.HOME:
+        return <Home isActive={activeMode === BindingMode.HOME} />;
       case BindingMode.AXIS:
         return <AppendVisualizer isActive={activeMode === BindingMode.AXIS} />;
       case BindingMode.KEY:
@@ -82,6 +85,12 @@ const App: React.FC = () => {
             <h3 className="text-[10px] font-bold uppercase tracking-wider text-zinc-500">Temporal Bindings</h3>
           </div>
           <NavItem
+            mode={BindingMode.HOME}
+            icon={LayoutGrid}
+            label="Home"
+            subLabel="Infographic Overview"
+          />
+          <NavItem
             mode={BindingMode.AXIS}
             icon={ArrowRightLeft}
             label="Axis Binding"
@@ -112,7 +121,6 @@ const App: React.FC = () => {
             <p>
               Want to contribute an idea or connect with our team? Join our community on <a href="https://timeplus.com/slack" target="_blank" rel="noopener noreferrer" className="underline hover:text-zinc-900 dark:hover:text-zinc-400">Slack</a>
             </p>
-
           </div>
         </div>
       </aside>
