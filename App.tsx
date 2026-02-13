@@ -49,7 +49,7 @@ const App: React.FC = () => {
     <button
       onClick={() => setActiveMode(mode)}
       className={`group w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-all duration-200 border-l-2 ${activeMode === mode
-        ? 'bg-zinc-100 dark:bg-surface border-primary text-zinc-900 dark:text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]'
+        ? 'bg-zinc-100 dark:bg-surface border-[#D53F8C] text-zinc-900 dark:text-white shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]'
         : 'border-transparent text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-white/5'
         }`}
     >
