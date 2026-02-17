@@ -9,15 +9,11 @@ import logo from './assets/timeplus-vistral_logo_pink.svg';
 
 const App: React.FC = () => {
   const [activeMode, setActiveMode] = useState<BindingMode>(BindingMode.HOME);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    // Check system preference or default to dark
-    if (document.documentElement.classList.contains('dark')) {
-      setIsDark(true);
-    } else {
-      setIsDark(false);
-    }
+    // Initialize to light mode by default
+    document.documentElement.classList.remove('dark');
   }, []);
 
   const toggleTheme = () => {
